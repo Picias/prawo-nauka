@@ -6,12 +6,18 @@
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden; /* Bezwzględna blokada przewijania na boki */
+}
+
 body {
     background-color: #f4f4f9;
     color: #333;
     display: flex;
     flex-direction: column;
-    height: 100vh; /* Zawsze zajmuje 100% wysokości ekranu */
+    height: 100vh;
 }
 
 header {
