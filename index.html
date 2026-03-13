@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Moja Nauka</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Prawo">
+    <link rel="apple-touch-icon" href="ikona.png">
+</head>
+<body>
+    <header>
+        <h1>Notatki & Testy</h1>
+    </header>
+
+    <main id="widok-notatki" class="widok aktywny">
+        <h2>Twoje Rozdziały</h2>
+        <ul id="lista-notatek" class="lista-elementow"></ul>
+    </main>
+
+    <main id="widok-czytania" class="widok">
+        <button id="przycisk-powrot" class="przycisk-akcji">⬅ Wróć do listy</button>
+        <h2 id="czytanie-tytul" style="margin-top: 15px;"></h2>
+        <pre><div id="czytanie-tresc" style="margin-top: 15px; line-height: 1.6;"></div></pre>
+    </main>
+
+    <main id="widok-testy" class="widok">
+        <h2>Sprawdź się</h2>
+        <ul id="lista-testow" class="lista-elementow"></ul>
+    </main>
+
+    <main id="widok-rozwiazywania" class="widok">
+        <button id="przycisk-przerwij" class="przycisk-akcji">⬅ Przerwij test</button>
+        <p id="test-postep" style="color: #888; margin: 10px 0; font-size: 0.9rem;"></p>
+        <h2 id="test-pytanie" style="margin-bottom: 20px;"></h2>
+        
+        <div id="pojemnik-na-odpowiedzi">
+            </div>
+    </main>
+
+    <main id="widok-wyniku" class="widok" style="text-align: center;">
+        <h2 style="margin-top: 30px;">Koniec testu!</h2>
+        <h1 id="wynik-liczbowy" style="font-size: 3rem; color: #007aff; margin: 20px 0;"></h1>
+        <p id="wynik-wiadomosc" style="margin-bottom: 30px; font-size: 1.1rem;"></p>
+        <button id="przycisk-zakoncz-test" class="przycisk-akcji" style="font-size: 1.2rem;">Wróć do listy testów</button>
+    </main>
+
+    <nav class="pasek-dolny">
+        <button id="przycisk-notatki" class="przycisk-nav aktywny">📖 Notatki</button>
+        <button id="przycisk-testy" class="przycisk-nav">📝 Testy</button>
+    </nav>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+/* Resetowanie podstawowych marginesów */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Zawsze zajmuje 100% wysokości ekranu */
+}
+
+header {
+    background-color: #007aff; /* Kolor niebieski z iOS */
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 1.2rem;
+}
+
+/* Główne okno na treść */
+.widok {
+    display: none; /* Domyślnie ukrywamy zakładki */
+    flex: 1; /* Wypełnia przestrzeń między nagłówkiem a paskiem na dole */
+    padding: 20px;
+    overflow-y: auto; /* Pozwala na przewijanie tekstu */
+}
+
+/* Klasa, która pokazuje aktywną zakładkę */
+.widok.aktywny {
+    display: block;
+}
+
+/* Wygląd list */
+.lista-elementow {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.lista-elementow li {
+    background: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Pasek na dole */
+.pasek-dolny {
+    display: flex;
+    background-color: white;
+    border-top: 1px solid #ddd;
+    padding-bottom: env(safe-area-inset-bottom); /* Poprawka na nowsze iPhony */
+}
+
+.przycisk-nav {
+    flex: 1;
+    background: none;
+    border: none;
+    padding: 15px 0;
+    font-size: 1rem;
+    color: #888;
+    cursor: pointer;
+}
+
+.przycisk-nav.aktywny {
+    color: #007aff;
+    font-weight: bold;
+}
+
+/* Styl dla klikalnych elementów listy i przycisku powrotu */
+.lista-elementow li {
+    cursor: pointer;
+}
+.lista-elementow li:active {
+    background-color: #e5e5ea; /* Efekt wciśnięcia na telefonie */
+}
+.przycisk-akcji {
+    background: none;
+    border: none;
+    color: #007aff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 0;
+}
+
+/* --- STYLE DLA TESTÓW --- */
+.przycisk-odpowiedz {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 12px;
+    background-color: white;
+    border: 2px solid #e5e5ea;
+    border-radius: 10px;
+    font-size: 1rem;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.przycisk-odpowiedz:active {
+    background-color: #d1d1d6;
+}
+
+.pole-tekstowe {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 2px solid #e5e5ea;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.przycisk-sprawdz {
+    width: 100%;
+    padding: 15px;
+    background-color: #007aff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
