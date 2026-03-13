@@ -1,4 +1,4 @@
-const CACHE_NAME = 'nauka-v1';
+const CACHE_NAME = 'nauka-v2';
 const ZASOBY_DO_ZAPISANIA = [
     './',
     './index.html',

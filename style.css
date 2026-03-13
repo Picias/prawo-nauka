@@ -128,3 +128,15 @@ header {
     font-weight: bold;
     cursor: pointer;
 }
+
+/* --- POPRAWKI ZAWIJANIA TEKSTU --- */
+body, main {
+    overflow-x: hidden; /* Całkowicie blokuje przewijanie ekranu na boki */
+}
+
+#czytanie-tresc, #test-pytanie, .przycisk-odpowiedz, .lista-elementow li {
+    white-space: pre-wrap; /* Zachowuje Twoje akapity (entery), ale wymusza zawijanie tekstu */
+    word-wrap: break-word; /* Łamie zbyt długie słowa, żeby nie wychodziły poza ekran */
+    overflow-wrap: break-word;
+    max-width: 100%; /* Zabezpieczenie, by tekst nie był szerszy niż ekran telefonu */
+}
